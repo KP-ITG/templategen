@@ -55,8 +55,18 @@ const elementSchema = new mongoose.Schema({
   // Untuk shape elements
   shapeType: {
     type: String,
-    enum: ['rectangle', 'circle', 'line'],
-    default: null
+    default: null,
+    validate: {
+      validator: function(v) {
+        // Allow null for non-shape elements
+        if (this.type !== 'shape') {
+          return v == null;
+        }
+        // For shape elements, require a valid value
+        return v != null && ['rectangle', 'circle', 'line'].includes(v);
+      },
+      message: 'shapeType is required for shape elements and must be one of: rectangle, circle, line'
+    }
   },
   backgroundColor: {
     type: String,

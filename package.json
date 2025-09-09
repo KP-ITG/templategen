@@ -7,7 +7,9 @@
     "start": "node src/app.js",
     "dev": "nodemon src/app.js",
     "test": "jest",
-    "seed": "node src/seeders/admin-seeder.js"
+    "seed": "node src/seeders/admin-seeder.js",
+    "seed:templates": "node src/seeders/template-seeder.js",
+    "seed:all": "npm run seed && npm run seed:templates"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
