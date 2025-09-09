@@ -1,0 +1,39 @@
+{
+  "name": "template-image-generator-backend",
+  "version": "1.0.0",
+  "description": "Backend API for mobile template image generator application",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "test": "jest",
+    "seed": "node src/seeders/admin-seeder.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^1.40.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-rate-limit": "^6.10.0",
+    "helmet": "^7.0.0",
+    "jimp": "^0.22.10",
+    "joi": "^17.9.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.5.0",
+    "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "jest": "^29.6.4",
+    "nodemon": "^3.0.1"
+  },
+  "keywords": [
+    "template",
+    "image",
+    "generator",
+    "mobile",
+    "api"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
